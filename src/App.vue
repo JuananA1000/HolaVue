@@ -1,20 +1,13 @@
-<!-- 
-  Aquí colocaremos la lógica de nuestras aplicaciones de VUE
- -->
 <script setup>
+const nombre = 'Juanan';
 console.log('Hola Vue');
 </script>
 
-<!-- 
-  Aquí colocaremos TODAS las etiquetas HTML/JSX para la estructura de nuestras aplicaciones de VUE
- -->
 <template>
   <h1>Hola Vue</h1>
+  <h1>Hola {{ nombre || 'valor por defecto' }}</h1>
 </template>
 
-<!-- 
-  Aquí renderizaremos los estilos
- -->
 <style>
 h1 {
   color: red;
