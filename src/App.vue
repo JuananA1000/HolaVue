@@ -2,6 +2,8 @@
 const nombre = 'Juanan';
 const colorDeEstilo = 'color: blue';
 const arrayColores = ['blue', 'green', 'peru'];
+const arrayFrutas = ['🍎', '🍌', '🍉', '🍓', '🍒'];
+
 const activo = true;
 
 console.log('Hola Vue');
@@ -29,6 +31,11 @@ console.log('Hola Vue');
 
   <!-- V-SHOW cambia la propiedad DISPLAY a NONE -->
   <h2 v-show="activo">Si me ves, es que mi condicion es V-SHOW = TRUE</h2>
+
+  <!-- V-FOR es similar a los map() o forEach() de ReactJS -->
+  <ul>
+    <li v-for="fruta in arrayFrutas">{{ fruta }}</li>
+  </ul>
 </template>
 
 <style>
