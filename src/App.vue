@@ -2,7 +2,25 @@
 const nombre = 'Juanan';
 const colorDeEstilo = 'color: blue';
 const arrayColores = ['blue', 'green', 'peru'];
-const arrayFrutas = ['🍎', '🍌', '🍉', '🍓', '🍒'];
+const arrayFrutas = ['🍎', '🍌', '🍊'];
+
+const frutasADetalle = [
+  {
+    nombre: 'Manzana',
+    precio: '1.5€',
+    descripcion: 'Una manzana.',
+  },
+  {
+    nombre: 'Plátano',
+    precio: '0.75€',
+    descripcion: 'Un plátano.',
+  },
+  {
+    nombre: 'Naranja',
+    precio: '1€',
+    descripcion: 'Una naranja.',
+  },
+];
 
 const activo = true;
 
@@ -35,6 +53,12 @@ console.log('Hola Vue');
   <!-- V-FOR es similar a los map() o forEach() de ReactJS -->
   <ul>
     <li v-for="fruta in arrayFrutas">{{ fruta }}</li>
+  </ul>
+
+  <ul>
+    <li v-for="fruta in frutasADetalle" :key="fruta.nombre">
+      {{ fruta.nombre }} - {{ fruta.precio }} -> {{ fruta.descripcion }}
+    </li>
   </ul>
 </template>
 
