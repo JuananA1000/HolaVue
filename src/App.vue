@@ -18,6 +18,17 @@ console.log('Hola Vue');
   <h2>
     {{ activo ? 'Estoy activo' : 'Estoy inactivo' }}
   </h2>
+
+  <h2 v-if="activo">Si me ves, es que mi condicion es activo</h2>
+  <h2 v-else="!activo">Si me ves, es que mi condicion es inactivo</h2>
+  <h2 v-if="!activo">Si me ves, es que mi condicion es inactivo</h2>
+
+  <h2 v-if="activo">Si me ves, es que estoy activo y estoy probando elseif</h2>
+  <h2 v-else-if="activo === false">Si me ves, es que estoy inactivo</h2>
+  <h2 v-else>Si me ves, es que estoy indeciso y mi condicion es NULL, CERO o ESPACIO VACÍO</h2>
+
+  <!-- V-SHOW cambia la propiedad DISPLAY a NONE -->
+  <h2 v-show="activo">Si me ves, es que mi condicion es V-SHOW = TRUE</h2>
 </template>
 
 <style>
